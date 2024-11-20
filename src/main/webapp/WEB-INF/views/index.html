@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Booking</title>
+</head>
+<body>
+<h2 th:text="#{app.title}">App Title</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>From</th>
+        <th>To</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--/*@thymesVar id="bookings" type="net.consulbit.academy.domain.Booking"*/-->
+    <tr th:each="booking : ${bookings}">
+        <td th:text="${booking.id}">Id</td>
+        <td th:text="${booking.fromLocation}">Name</td>
+        <td th:text="${booking.toLocation}">Name</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
