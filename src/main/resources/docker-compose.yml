@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql:lts-oracle
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: test
+      HOST_PORT: 3306
+      CONTAINER_PORT: 3306
